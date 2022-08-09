@@ -1,0 +1,21 @@
+Challenge 2 Objective: Make a more generalized program that will transfer
+the data of an attacker to a csv file. Secondary goal is to use OOP so that
+this program can be built upon in the future for larger projects.
+
+Approach: Separate the program into two main files: main.py and json.py. The
+main file is where the program will run and it includes the test cases. Json.py
+includes the json class: a class that will be invoked when the input file type
+is a json file. The primary method in this class is the getCSV method which
+is what the user will call to transfer the specified json data into a csv. In
+the future this method might need to be modified for allow for more types of
+data request.
+
+The other relevant function is getData which is a partially recursive function,
+set up to deal with nested objects in a way that is generalizable. The time
+complexity may be an issue in the future but it was the best I could do at the 
+moment.
+
+Running the program: Run the program in challenge2_main.py. There already exists
+csv files for the first three attackers in the list. To get new data, add 
+another call (i.e. test1.getCSV("attackers", 4, "attacker4_info.csv")) and a
+new csv file will be created with the given information.
